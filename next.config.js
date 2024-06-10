@@ -1,3 +1,4 @@
+const { hostname } = require("os")
 const { withStoreConfig } = require("./store-config")
 const store = require("./store.config.json")
 
@@ -12,6 +13,10 @@ const nextConfig = withStoreConfig({
       {
         protocol: "http",
         hostname: "localhost",
+      },
+      {
+        protocol: "https",
+        hostname: "https://medusa-dawr-production.up.railway.app",
       },
       {
         protocol: "https",
